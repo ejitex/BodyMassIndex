@@ -1,9 +1,9 @@
 const express = require("express");
-const bodyParserBmi = require("body-parser");
+const bodyParser = require("body-parser");
 const app = express();
 const port = 3000;
 
-app.use(bodyParserBmi.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/", function(req, res){
   res.sendFile(__dirname + "/index2.html")
@@ -20,5 +20,5 @@ app.post("/", function(res, req){
 
 
 app.listen(port,function(){
-  console.log("Running on port 3001");
+  console.log("Running on port 3000");
 });
